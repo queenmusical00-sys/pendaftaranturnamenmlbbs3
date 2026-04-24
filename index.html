@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Akun</title>
+    <style>
+        body { background-color: #1a2639; color: white; font-family: sans-serif; display: flex; justify-content: center; padding: 20px; }
+        .form-container { background: #25334a; padding: 20px; border-radius: 8px; width: 100%; max-width: 400px; border-top: 5px solid #f39c12; }
+        h2 { color: #f39c12; font-size: 18px; margin-bottom: 20px; }
+        label { display: block; margin: 10px 0 5px; font-size: 14px; }
+        input, select { width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 4px; border: 1px solid #444; background: #fff; box-sizing: border-box; }
+        .btn-submit { background-color: #4a90e2; color: white; border: none; padding: 12px; width: 100%; border-radius: 4px; cursor: pointer; font-weight: bold; margin-top: 10px; }
+        .note { font-size: 11px; color: #bdc3c7; margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>| Rincian Akun</h2>
+        <form action="https://formspree.io/f/XXXXX" method="POST">
+            <label>Nama pengguna</label>
+            <input type="text" name="username" placeholder="6-12 karakter" required>
+            <div class="note">* Gunakan huruf dan angka saja</div>
+
+            <label>Kata sandi</label>
+            <input type="password" name="password" required>
+
+            <label>Alamat email</label>
+            <input type="email" name="email" required>
+
+            <h2>| Informasi Bank</h2>
+            <label>Nama Sesuai Rekening</label>
+            <input type="text" name="nama_rekening" required>
+
+            <label>Bank</label>
+            <select name="bank">
+                <option value="">- Silahkan Pilih -</option>
+                <option value="BCA">BCA</option>
+                <option value="MANDIRI">MANDIRI</option>
+                <option value="BNI">BNI</option>
+            </select>
+
+            <label>No. Rekening Bank</label>
+            <input type="number" name="nomor_rekening" required>
+
+            <button type="submit" class="btn-submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
